@@ -130,17 +130,6 @@ Secure TCP connection handler for receiving authentication tokens from web backe
 - Implements certificate pinning
 - Validates token signatures
 
-#### Message Protocol
-Receives JSON formatted authentication tokens:
-```json
-{
-    "session_id": "user_session_hash",
-    "auth_token": "oauth_token",
-    "timestamp": "iso_timestamp",
-    "signature": "token_signature"
-}
-```
-
 ### server.py
 Temporary development implementation for handling OAuth callback redirects.
 **Note**: Should be replaced with proper web server implementation for production.
@@ -167,4 +156,5 @@ Temporary development implementation for handling OAuth callback redirects.
 - Make a proper class which determines what accounts on what sites the user is using, Currently. The backend just calls the Quickbooks class for testing and runs it on the thread, as opposed to a class which could handle multiple user accounts via there respective classes.
 - Backend only differentiates users by SID, meaning one user can log in on the same account multiple times.
 - Implement proper web server for production, replace `server.py` functionality
+
 - 
